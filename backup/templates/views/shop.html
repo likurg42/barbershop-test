@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барбершоп Бородинский</title>
+</head>
+
+<body class="inner-page">
+    <%= _.template(require('./../includes/shop-header.html').default)() %>
+
+
+    <main class="container">
+        <h1 class="page-title">Средства для ухода</h1>
+
+        <nav class="site-breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li class="breadrumbs-item">
+                    <a class="breadcrumbs-link" href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link" href="#">Магазин</a>
+                </li>
+                <li class="breadcrumbs-item breadcrumbs-item-current">
+                    Средства для ухода
+                </li>
+            </ul>
+        </nav>
+        <div class="shop-columns">
+            <section class="catalog-settings">
+                <h2 class="visually-hidden">Параметры товара</h2>
+
+                <form action="post" class="catalog-settings-form">
+                    <fieldset>
+                        <legend class="form-title">Производители:</legend>
+                        <ul class="manufacturer-list filter-list">
+                            <li>
+                                <input type="checkbox" id="filter-baxter-of-california"
+                                    name="filter-baxter-of-california" checked>
+                                <label for="filter-baxter-of-california">Baxter of california</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="filter-mr-natty" name="filter-mr-natty" disabled>
+                                <label for="filter-mr-natty">Mr Natty</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="filter-suavecito" name="filter-suavecito" checked>
+                                <label for="filter-suavecito">Suavecito</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="filter-malin+goez" name="filter-malin+goez">
+                                <label for="filter-malin+goez">Malin+Goez</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="filter-murrays" name="filter-murrays">
+                                <label for="filter-murrays">Murray's</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="filter-american-crew" name="filter-american-crew">
+                                <label for="filter-american-crew">American Crew</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="form-title">Группы товаров:</legend>
+                        <ul class="group-list filter-list">
+                            <li>
+                                <input type="radio" name="group-name" value="shaving-accessories"
+                                    id="shaving-accessories">
+                                <label for="shaving-accessories">Бритвенные принадлежности</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="group-name" value="care-products" id="care-products">
+                                <label for="care-products">Средства для ухода</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="group-name" value="acessories" id="acessories">
+                                <label for="acessories">Аксессуары</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <button type="submit" class="button">Показать</button>
+                </form>
+            </section>
+
+            <section class="catalog">
+                <h2 class="visually-hidden">Список товаров</h2>
+                <ul class="catalog-items-list">
+                    <li class="catalog-item">
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Набор для путешествий</span>
+                                <span>«Baxter of California»</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-1.jpg" alt="Набор для путешествий «Baxter of California»">
+                            </a>
+                        </p>
+
+                        <p class="catalog-item-price">
+                            <b class="price">2 900 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+                    </li>
+                    <li class="catalog-item">
+
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Увлажняющий кондиционер</span>
+                                <span>«Baxter of California»</span>
+                            </a>
+                        </h3>
+
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-2.jpg" alt="Увлажняющий кондиционер «Baxter of California»">
+                            </a>
+                        </p>
+                        <p class="catalog-item-price">
+                            <b>750 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+
+
+                    </li>
+                    <li class="catalog-item">
+
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Гель для волос</span>
+                                <span>«SUAVECITO»</span>
+                            </a>
+                        </h3>
+
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-3.jpg" alt="Гель для волос «SUAVECITO»">
+                            </a>
+                        </p>
+                        <p class="catalog-item-price">
+                            <b>290 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+
+                    </li>
+                    <li class="catalog-item">
+
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Глина для укладки волос</span>
+                                <span>«American crew»</span>
+                            </a>
+                        </h3>
+
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-4.jpg" alt="Глина для укладки волос «American crew»">
+                            </a>
+                        </p>
+                        <p class="catalog-item-price">
+                            <b>500 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+
+                    </li>
+                    <li class="catalog-item">
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Гель для волос</span>
+                                <span>«AMERICAN CREW»</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-5.jpg" alt="Гель для волос «AMERICAN CREW»">
+                            </a>
+                        </p>
+
+                        <p class="catalog-item-price">
+                            <b>300 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+                    </li>
+                    <li class="catalog-item">
+
+                        <h3>
+                            <a class="catalog-item-link" href="#">
+                                <span>Набор для бритья</span>
+                                <span>«Baxter of California»</span>
+                            </a>
+                        </h3>
+
+                        <p class="catalog-item-image">
+                            <a href="#">
+                                <img src="images/item-6.jpg" alt="Набор для бритья «Baxter of California»">
+                            </a>
+                        </p>
+                        <p class="catalog-item-price">
+                            <b>3 900 ₽</b>
+                            <button class="button">Купить</button>
+                        </p>
+
+                    </li>
+                </ul>
+
+                <ul class="pagination-list">
+                    <li class="pagination-list-item"><a class="pagination-list-link" href="#">1</a></li>
+                    <li class="pagination-list-item"><a class="pagination-list-link pagination-list-link-current"
+                            href="#">2</a></li>
+                    <li class="pagination-list-item"><a href="#" class="pagination-list-link">3</a></li>
+                    <li class="pagination-list-item"><a href="#" class="pagination-list-link">4</a></li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+    <%= _.template(require('./../includes/footer.html').default)() %>
+    <%= _.template(require('./../includes/modal-login.html').default)() %>
+    <%= _.template(require('./../includes/modal-map.html').default)() %>
+</body>
+
+</html>

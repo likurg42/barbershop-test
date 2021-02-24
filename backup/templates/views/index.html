@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барбершоп Бородинский</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/index-header.html').default)() %>
+
+    <main class="container">
+        <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+
+        <section class="features">
+            <h2 class="visually-hidden">Наши особенности</h2>
+            <ul class="features-list">
+                <li class="feature-item">
+                    <h3 class="feature-title">Быстро</h3>
+                    <p class="feature-text">МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА<br> ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ –
+                        СЧАСТЛИВЫЙ<br>
+                        ОБЛАДАТЕЛЬ СТИЛЬНОЙ
+                        СТРИЖКИ-МИНУТКИ!</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Круто</h3>
+                    <p class="feature-text">ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.<br>
+                        МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!<br>
+                        ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+                    </p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Дорого</h3>
+                    <p class="feature-text">НАШИ МАСТЕРА – ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И<br> НЕ МОГУТ СТОИТЬ ДЕШЕВО. К
+                        ТОМУ
+                        ЖЕ, РАЗВЕ ЦЕНА<br> НЕ ДАЕТ
+                        ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="index-columns">
+            <section class="news">
+                <h2 class="section-title">Новости</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <h3 class="news-title">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО
+                            ВРЕМЯ СТРИЖКИ
+                        </h3>
+                        <time datetime="2020-01-11">11 января</time>
+                    </li>
+                    <li class="news-item news-item-last">
+                        <h3 class="news-title">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ
+                            МНОЖЕСТВА ТИТУЛОВ И НАГРАД
+                            ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</h3>
+                        <time datetime="2020-01-18">18 января</time>
+                    </li>
+                </ul>
+                <a href="#" class="button">Все новости</a>
+            </section>
+
+            <section class="gallery">
+                <h2 class="section-title">Фотогалерея</h2>
+                <div class="gallery-container">
+                    <figure class="gallery-content">
+                        <img class="gallery-content-image" src="images/gallery-preview.jpg" alt="" width="286"
+                            height="164">
+                    </figure>
+                    <button class="button gallery-button gallery-button-back" disabled>Назад</button>
+                    <button class="button gallery-button gallery-button-next">Вперед</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="index-columns">
+            <section class="contacts">
+                <h2 class="section-title">Контактная информация</h2>
+                <p class="contacts-text">
+                    БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+                    АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+                    ТЕЛЕФОН: +7 (495) 666-02-66
+                </p>
+                <p class="contacts-text contacts-text-last">
+                    ВРЕМЯ РАБОТЫ:<br>
+                    ПН—ПТ: С 10:00 ДО 22:00<br>
+                    СБ—ВС: С 10:00 ДО 19:00
+                </p>
+                <a class="button">Как проехать</a>
+                <a class="button">Обратная связь</a>
+            </section>
+
+            <section class="appointment">
+                <h2 class="section-title">Записаться</h2>
+                <p class="appointment-text">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ<br> С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
+                    БРОНИ</p>
+                <form action="POST" class="appointment-form">
+                    <div class="appointment-form-items-container">
+                        <p class="appointment-form-item">
+                            <label class="appointment-form-label" for="appointment-date">дата</label>
+                            <input type="text" id="appointment-date" name="appointment-date" placeholder="08.10.2019">
+                        </p>
+                        <p class="appointment-form-item">
+                            <label class="appointment-form-label" for="appointment-time">Время</label>
+                            <input type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
+                        </p>
+                        <p class="appointment-form-item">
+                            <label class="appointment-form-label" for="appointment-name">Ваше имя</label>
+                            <input type="text" id="appointment-name" name="appointment-name" placeholder="Борода">
+                        </p>
+                        <p class="appointment-form-item">
+                            <label class="appointment-form-label" for="appointment-tel">Телефон</label>
+                            <input type="text" id="appointment-tel" name="appointment-tel"
+                                placeholder="+7 123 456-78-90">
+                        </p>
+                    </div>
+                    <button class="button appointment-form-button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <%= _.template(require('./../includes/footer.html').default)() %>
+    <%= _.template(require('./../includes/modal-login.html').default)() %>
+    <%= _.template(require('./../includes/modal-map.html').default)() %>
+
+
+</body>
+
+</html>

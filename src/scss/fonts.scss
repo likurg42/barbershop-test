@@ -1,0 +1,22 @@
+@import "./mixins.scss";
+
+
+@include font-face('PT Sans Narrow', fonts/ptsansnarrow, null, null, woff2 woff);
+@include font-face('PT Sans Narrow', fonts/ptsansnarrowbold, bold, null, woff2 woff);
+
+/* Как будет рендерится верхняя строчка */
+// @font-face {
+//     font-family: "PT Sans Narrow";
+//     font-weight: normal;
+//     letter-spacing: normal;
+//     src: url("../fonts/ptsansnarrow.woff2") format("woff2"),
+//         url("../fonts/ptsansnarrow.woff") format("woff");
+// }
+// @font-face {
+//     font-family: "PT Sans Narrow";
+//     font-weight: bold;
+//     letter-spacing: normal;
+//     src: url("../fonts/ptsansnarrowbold.woff2") format("woff2"),
+//         url("../fonts/ptsansnarrowbold.woff") format("woff");
+// }
+
